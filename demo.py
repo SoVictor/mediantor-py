@@ -1,10 +1,11 @@
-from mediantor import MediantorHeap
+from mediantor import MediantorSqrtDecomp
 
 
 if __name__ == "__main__":
-    mediantor = MediantorHeap()
-
     n: int = int(input())
+
+    mediantor = MediantorSqrtDecomp(n)
+
     for _ in range(n):
         numbers: list[int] = list(map(int, input().split()))
         operation: int = numbers[0]
