@@ -4,8 +4,7 @@ from mediantor import IMediantor, Mediantor, make_mediantor
 if __name__ == "__main__":
     mediantor_type: int = -1
     while mediantor_type < 0 or mediantor_type >= len(Mediantor):
-        print("Please choose which Mediantor implementation to use by writing a "
-            "single number:")
+        print("Please choose which Mediantor implementation to use by writing a single number:")
         print("0 - Mediantor as two heaps")
         print("1 - Mediantor as SQRT-decomposition")
         print("2 - Mediantor as a sorted list")
