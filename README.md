@@ -1,4 +1,6 @@
-# Mediantor-cpp
+# Mediantor-py
+
+![tests](https://github.com/SoVictor/mediantor-py/actions/workflows/build_and_test.yml/badge.svg)
  
 Mediantor is a container that stores a collection of integers and provides only two operations:
 
