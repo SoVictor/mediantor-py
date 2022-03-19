@@ -1,10 +1,11 @@
-from mediantor import MediantorSqrtDecomp
+from mediantor.i_mediantor import IMediantor
+from mediantor.mediantor_sqrt_decomp import MediantorSqrtDecomp
 
 
 if __name__ == "__main__":
     n: int = int(input())
 
-    mediantor = MediantorSqrtDecomp(n)
+    mediantor: IMediantor = MediantorSqrtDecomp(n)
 
     for _ in range(n):
         numbers: list[int] = list(map(int, input().split()))
