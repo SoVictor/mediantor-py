@@ -1,5 +1,4 @@
-from mediantor.i_mediantor import IMediantor
-from mediantor.mediantor_heap import MediantorHeap
+from mediantor import IMediantor, MediantorHeap
 
 
 def test_trivial():

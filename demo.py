@@ -1,11 +1,21 @@
-from mediantor.i_mediantor import IMediantor
-from mediantor.mediantor_sqrt_decomp import MediantorSqrtDecomp
+from mediantor import IMediantor, Mediantor, make_mediantor
 
 
 if __name__ == "__main__":
+    mediantor_type: int = -1
+    while mediantor_type < 0 or mediantor_type >= len(Mediantor):
+        print("Please choose which Mediantor implementation to use by writing a "
+            "single number:")
+        print("0 - Mediantor as two heaps")
+        print("1 - Mediantor as SQRT-decomposition")
+        print("2 - Mediantor as a sorted list")
+        mediantor_type = int(input())
+
+    print("Please provide an input in a format described in README:")
+
     n: int = int(input())
 
-    mediantor: IMediantor = MediantorSqrtDecomp(n)
+    mediantor: IMediantor = make_mediantor(Mediantor(mediantor_type), n)
 
     for _ in range(n):
         numbers: list[int] = list(map(int, input().split()))
