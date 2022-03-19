@@ -16,6 +16,7 @@ if __name__ == "__main__":
 
     mediantor: IMediantor = make_mediantor(Mediantor(mediantor_type), n)
 
+    ans: list[int] = list()
     for _ in range(n):
         numbers: list[int] = list(map(int, input().split()))
         operation: int = numbers[0]
@@ -23,4 +24,9 @@ if __name__ == "__main__":
             x: int = numbers[1]
             mediantor.insert(x)
         else:
-            print(mediantor.take())
+            ans.append(mediantor.take())
+
+    print()
+    print("Output:")
+    for x in ans:
+        print(x)
