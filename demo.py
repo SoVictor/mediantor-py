@@ -1,8 +1,8 @@
-from mediantor import MediantorSortedList
+from mediantor import MediantorHeap
 
 
 if __name__ == "__main__":
-    mediantor = MediantorSortedList()
+    mediantor = MediantorHeap()
 
     n: int = int(input())
     for _ in range(n):
