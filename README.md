@@ -1,7 +1,8 @@
 # Mediantor-py
 
 ![tests](https://github.com/SoVictor/mediantor-py/actions/workflows/build_and_test.yml/badge.svg)
- 
+[![Maintainability](https://api.codeclimate.com/v1/badges/5b26366819a9c964d148/maintainability)](https://codeclimate.com/github/SoVictor/mediantor-py/maintainability)
+
 Mediantor is a container that stores a collection of integers and provides only two operations:
 
 * `insert(x)` - adds _x_ to collection;
