@@ -1,4 +1,4 @@
-name: build_and_test
+name: tests_and_codestyle
 
 on:
   push:
@@ -28,3 +28,5 @@ jobs:
         run: pipenv install --deploy --dev
       - name: run pytest
         run: pipenv run pytest
+      - name: run flake8
+        run: pipenv run flake8
