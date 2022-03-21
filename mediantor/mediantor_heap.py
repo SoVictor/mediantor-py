@@ -1,6 +1,7 @@
-from .i_mediantor import IMediantor
 from heapq import heappop, heappush
 from typing import Final
+
+from .i_mediantor import IMediantor
 
 
 class MediantorHeap(IMediantor):

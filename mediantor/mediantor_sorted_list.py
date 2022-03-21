@@ -1,5 +1,6 @@
-from .i_mediantor import IMediantor
 from typing import Final
+
+from .i_mediantor import IMediantor
 
 
 class MediantorSortedList(IMediantor):

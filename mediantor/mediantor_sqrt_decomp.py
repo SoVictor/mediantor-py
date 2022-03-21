@@ -1,7 +1,8 @@
-from .i_mediantor import IMediantor
 from collections import deque
 from math import sqrt
 from typing import Final
+
+from .i_mediantor import IMediantor
 
 
 class MediantorSqrtDecomp(IMediantor):

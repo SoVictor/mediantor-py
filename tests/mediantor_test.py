@@ -1,7 +1,8 @@
-from mediantor import IMediantor, Mediantor, make_mediantor
 import os
+
 import pytest
 
+from mediantor import IMediantor, Mediantor, make_mediantor
 
 MEDIANTORS_LIST: list[Mediantor] = [Mediantor.HEAP, Mediantor.SQRT_DECOMP, Mediantor.SORTED_LIST]
 

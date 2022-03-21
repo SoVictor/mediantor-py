@@ -1,8 +1,9 @@
+from enum import Enum
+
 from .i_mediantor import IMediantor
 from .mediantor_heap import MediantorHeap
 from .mediantor_sorted_list import MediantorSortedList
 from .mediantor_sqrt_decomp import MediantorSqrtDecomp
-from enum import Enum
 
 
 class Mediantor(Enum):

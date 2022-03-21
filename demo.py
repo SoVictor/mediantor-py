@@ -1,6 +1,6 @@
-from mediantor import IMediantor, Mediantor, make_mediantor
 from typing import Final
 
+from mediantor import IMediantor, Mediantor, make_mediantor
 
 if __name__ == "__main__":
     mediantor_type: int = -1
