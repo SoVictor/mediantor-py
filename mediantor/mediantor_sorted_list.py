@@ -1,4 +1,5 @@
 from .i_mediantor import IMediantor
+from typing import Final
 
 
 class MediantorSortedList(IMediantor):
@@ -16,7 +17,7 @@ class MediantorSortedList(IMediantor):
 
     # O(N)
     def take(self) -> int:
-        idx: int = (len(self._elements) - 1) // 2
+        idx: Final[int] = (len(self._elements) - 1) // 2
         return self._elements.pop(idx)
 
     # O(1)

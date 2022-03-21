@@ -1,5 +1,6 @@
-from heapq import heappop, heappush
 from .i_mediantor import IMediantor
+from heapq import heappop, heappush
+from typing import Final
 
 
 class MediantorHeap(IMediantor):
@@ -22,7 +23,7 @@ class MediantorHeap(IMediantor):
 
     # O(log N)
     def take(self) -> int:
-        ans: int = -heappop(self._lower_half)
+        ans: Final[int] = -heappop(self._lower_half)
 
         self.maybe_balance()
 

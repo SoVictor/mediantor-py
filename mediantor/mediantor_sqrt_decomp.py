@@ -1,6 +1,7 @@
-from collections import deque
 from .i_mediantor import IMediantor
+from collections import deque
 from math import sqrt
+from typing import Final
 
 
 class MediantorSqrtDecomp(IMediantor):
@@ -33,19 +34,19 @@ class MediantorSqrtDecomp(IMediantor):
         for i in range(bucket_idx, len(self._buckets) - 1):
             self._buckets[i + 1].appendleft(self._buckets[i].pop())
         if len(self._buckets[-1]) > self._bucket_size:
-            x: int = self._buckets[-1].pop()
+            t: Final[int] = self._buckets[-1].pop()
             self._buckets.append(deque())
-            self._buckets[-1].append(x)
+            self._buckets[-1].append(t)
 
         self._size += 1
 
     # O(sqrt(N)).
     def take(self) -> int:
-        idx: int = (self._size - 1) // 2
-        bucket_idx: int = idx // self._bucket_size
-        idx_in_bucket = idx % self._bucket_size
+        idx: Final[int] = (self._size - 1) // 2
+        bucket_idx: Final[int] = idx // self._bucket_size
+        idx_in_bucket: Final[int] = idx % self._bucket_size
 
-        ans: int = self._buckets[bucket_idx][idx_in_bucket]
+        ans: Final[int] = self._buckets[bucket_idx][idx_in_bucket]
         del self._buckets[bucket_idx][idx_in_bucket]
 
         for i in range(bucket_idx, len(self._buckets) - 1):

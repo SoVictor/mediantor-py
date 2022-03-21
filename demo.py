@@ -1,4 +1,5 @@
 from mediantor import IMediantor, Mediantor, make_mediantor
+from typing import Final
 
 
 if __name__ == "__main__":
@@ -12,7 +13,7 @@ if __name__ == "__main__":
 
     print("Please provide an input in a format described in README:")
 
-    n: int = int(input())
+    n: Final[int] = int(input())
 
     mediantor: IMediantor = make_mediantor(Mediantor(mediantor_type), n)
 
